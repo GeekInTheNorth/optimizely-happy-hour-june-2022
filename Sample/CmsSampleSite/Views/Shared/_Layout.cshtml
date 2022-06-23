@@ -1,0 +1,17 @@
+﻿@using CmsSampleSite.Features.Pages
+@model ISitePageViewModel<ISitePageData>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <vc:meta-data site-page="@Model.CurrentPage"></vc:meta-data>
+    <vc:social-meta-data site-page="@Model.CurrentPage"></vc:social-meta-data>
+
+    @await Html.RenderEPiServerQuickNavigatorAsync()
+</head>
+<body>
+    @RenderBody()
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

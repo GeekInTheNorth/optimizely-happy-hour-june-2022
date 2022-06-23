@@ -1,0 +1,27 @@
+﻿@model CmsSampleSite.Features.Pages.Complex.ComplexPageViewModel
+
+<div>
+    @Html.PropertyFor(x => x.CurrentPage.HeroImage)
+    <h1>@Html.PropertyFor(x => x.CurrentPage.Heading)</h1>
+
+    @if (string.IsNullOrWhiteSpace(Model.TextOne))
+    {
+        <p>If you add a querystring for parameterOne here, then something else will happen.</p>
+    }
+    else
+    {
+        <p>It looks like you entered a value of <em>@Model.TextOne</em> to the querystring for parameterOne.</p>
+    }
+    @if (string.IsNullOrWhiteSpace(Model.TextTwo))
+    {
+        <p>If you add a querystring for parameterTwo here, then something else will happen.</p>
+    }
+    else
+    {
+        <p>It looks like you entered a value of <em>@Model.TextTwo</em> to the querystring for parameterTwo.</p>
+    }
+
+    <div>
+        @Html.PropertyFor(x => x.CurrentPage.MainContentArea)
+    </div>
+</div>
