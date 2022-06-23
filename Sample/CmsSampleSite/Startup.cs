@@ -24,9 +24,6 @@ namespace CmsSampleSite.Ui
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
 
-    using Stott.Optimizely.RobotsHandler.Configuration;
-    using Stott.Security.Optimizely.Features.Configuration;
-
     public class Startup
     {
         private readonly IWebHostEnvironment _webHostingEnvironment;
@@ -80,8 +77,6 @@ namespace CmsSampleSite.Ui
 
             services.AddCustomDependencies();
             services.AddGetaCategories();
-            services.AddRobotsHandler();
-            services.AddCspManager();
 
             services.AddHealthChecks()
                     .AddCustomHealthChecks();
@@ -101,7 +96,6 @@ namespace CmsSampleSite.Ui
             app.UseNotFoundHandler();
             app.UseOptimizelyNotFoundHandler();
             app.UseGetaCategories();
-            app.UseCspManager();
 
             app.UseEndpoints(endpoints =>
             {
