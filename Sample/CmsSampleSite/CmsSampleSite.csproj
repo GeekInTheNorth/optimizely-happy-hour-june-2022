@@ -8,4 +8,8 @@
     <PackageReference Include="Geta.NotFoundHandler.Optimizely" Version="2.0.0" />
     <PackageReference Include="Geta.Optimizely.Categories" Version="1.0.0" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\MyNewPlugin\MyNewPlugin.csproj" />
+  </ItemGroup>
 </Project>
